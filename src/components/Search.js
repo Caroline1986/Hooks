@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 
 const Search = () => {
@@ -7,7 +7,7 @@ const Search = () => {
 
     useEffect(() => {
         const search = async () => {
-            const { data } = await axios.get('https://en.wikipedia.org/w/api.php', {
+            const {data} = await axios.get('https://en.wikipedia.org/w/api.php', {
                 params: {
                     action: 'query',
                     list: 'search',
@@ -20,7 +20,7 @@ const Search = () => {
             setResults(data.query.search);
         };
 
-        if (term && !results.length){
+        if (term && !results.length) {
             search();
         } else {
             const timeoutId = setTimeout(() => {
@@ -28,13 +28,11 @@ const Search = () => {
                     search();
                 }
             }, 1000);
+
+            return () => {
+                clearTimeout(timeoutId);
+            };
         }
-
-
-
-        return () => {
-            clearTimeout(timeoutId);
-        };
     }, [term]);
 
     const renderedResults = results.map((result) => {
