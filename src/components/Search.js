@@ -3,7 +3,18 @@ import axios from 'axios';
 
 const Search = () => {
     const [term, setTerm] = useState('programming');
+    const [debounceTerm, setDebouncedTerm] = useState(term);
     const [results, setResults] = useState([]);
+
+    useEffect(() => {
+        const timerId = setTimeout(() => {
+            setDebouncedTerm(term);
+        }, 1000);
+
+        return () => {
+            clearTimeout(timerId);
+        };
+    }, [term]);
 
     useEffect(() => {
         const search = async () => {
