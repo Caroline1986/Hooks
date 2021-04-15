@@ -34,8 +34,6 @@ const Search = () => {
     }, [debouncedTerm]);
 
     // useEffect(() => {
-    //
-    //
     //     if (term && !results.length) {
     //         search();
     //     } else {
