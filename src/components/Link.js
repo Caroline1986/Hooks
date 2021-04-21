@@ -2,6 +2,10 @@ import React from "react";
 
 const Link = ({className, href, children}) => {
     const onClick = (event) => {
+        if (event.metaKey || event.ctrlKey) {
+            return; //if user wants to click on link using control to open a new tab
+        }
+
         event.preventDefault();
         window.history.pushState({}, '', href);
 
