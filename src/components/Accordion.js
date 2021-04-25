@@ -1,3 +1,4 @@
+import './AccordionStylesheet.css'
 import React, {useState} from 'react';
 
 const Accordion = ({ items }) => {
