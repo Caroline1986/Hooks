@@ -13,13 +13,73 @@ const options = [
         value: 'ar'
     },
     {
-        label: 'Hindi',
-        value: 'hi'
+        label: 'Chinese (traditional)',
+        value: 'zh-TW'
+    },
+    {
+        label: 'Croatian',
+        value: 'hr'
+    },
+    {
+        label: 'Czech',
+        value: 'cs'
     },
     {
         label: 'Dutch',
         value: 'nl'
-    }
+    },
+    {
+        label: 'Estonian',
+        value: 'et'
+    },
+    {
+        label: 'Finnihs',
+        value: 'fi'
+    },
+    {
+        label: 'French',
+        value: 'fr'
+    },
+    {
+        label: 'Galician',
+        value: 'gl'
+    },
+    {
+        label: 'German',
+        value: 'de'
+    },
+    {
+        label: 'Greek',
+        value: 'el'
+    },
+    {
+        label: 'Haitian Creole',
+        value: 'ht'
+    },
+    {
+        label: 'Hawaiian',
+        value: 'haw'
+    },
+    {
+        label: 'Hebrew',
+        value: 'he'
+    },
+    {
+        label: 'Hindi',
+        value: 'hi'
+    },
+    {
+        label: 'Hungarian',
+        value: 'hu'
+    },
+    {
+        label: 'Icelandic',
+        value: 'is'
+    },
+    {
+        label: 'Irish',
+        value: 'ga'
+    },
 ];
 
 const Translate = () => {
